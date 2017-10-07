@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>your weight</title>
+    <style>
+      body
+      {
+        background-color: #68b719;
+        color: white;
+        font-family: arial;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Tu peso en otro planeta es?</h1>
+      <script>
+        var user = prompt("Cual es tu peso?");
+        var peso = parseInt(user);
+        var planeta = parseInt(prompt("Choose you planet 1 is mars 2 is jupiter:"));
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var nombre;
+        var peso_final;
+        if (planeta == 1)
+        {
+          peso_final = peso * (g_marte/g_tierra);
+          peso_final = parseInt(peso_final);
+          nombre = "marte";
+
+        }
+        else if(planeta == 2)
+        {
+          peso_final = peso * (g_jupiter/g_tierra);
+          peso_final = parseInt(peso_final);
+          nombre = "jupiter";
+
+        }
+        else
+        {
+          alert("no te pases de listo!!!")
+        }
+        document.write("Tu peso en " + nombre + " es:<strong> " + peso_final + " kilos</strong>");
+      </script>
+  </body>
+</html>
